@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #09133b;
+}
+a, a:hover{ 
+    text-decoration: none;
+    color: wheat;
+}
+.container{
+    width: 90%;
+    padding: 15px;
+    margin: auto;
+}
+.header{
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+}
+.logo{
+    color: wheat;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation{
+    margin: 0 10px 0 10px ;
+    font-size: 20px;
+    font-weight: 700;
+}
+.login button{
+    width: 80px;
+    height: 35px;
+    background: transparent;
+    border-radius: 20px;
+    margin: 0 0 0 10px;
+    border: 2px solid wheat;
+    color: wheat;
+    font-size: 15px;
+    font-weight: 500;
+}
+.login button:first-child{
+    margin: 0 0 0 30px;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 0 200px 0;
+}
+
+.earth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 200px;
+    border-radius: 50%;
+    width: 50%;
+    height: 550px;
+    animation: earth 2s ease-out infinite;
+
+    box-shadow: 0 0 10px rgba(0, 123, 255, .7),
+                 0 0 70px rgba(0, 123, 255, .7),
+                  0 0 100px rgba(0, 123, 255, .7),
+                   0 0 140px rgba(0, 123, 255, .7),
+                    0 0 200px rgba(0, 123, 255, .7),
+                     0 0 250px rgba(0, 123, 255, .7);
+}
+.hero-img{
+    position: absolute;
+    top: -145px;
+    left: -105px;
+    width: 139%;
+    filter: brightness(1000%);
+    filter: contrast(1000%);
+}
+@keyframes earth {
+    0% 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.9);
+    }
+}
+
+.icons{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 50px;
+    left: 47%;
+    background: #000;
+}
+.icon-img{
+    position: absolute;
+    top: 0;
+    width: 40px;
+    border: 1px solid ;
+    border-color: rgb(17, 181, 246);
+    padding: 10px;
+    border-radius: 50%;
+}
+.icon:first-child{
+    transform: translate(0,0);
+    animation: icon 15s infinite;
+    animation-delay: 1s;
+}
+.icon:nth-child(2){
+    transform: translate(150px, 30px);
+    animation: icon 15s infinite;
+    animation-delay: 2s;
+}
+.icon:nth-child(3){
+    transform: translate(290px, 120px);
+    animation: icon 15s infinite;
+    animation-delay: 3s;
+}
+.icon:nth-child(4){
+    transform: translate(380px, 225px);
+    animation: icon 15s infinite;
+    animation-delay: 4s;
+}
+.icon:nth-child(5){
+    transform: translate(420px, 385px);
+    animation: icon 15s infinite;
+    animation-delay: 5s;
+}
+.icon:nth-child(6){
+    transform: translate(380px, 555px);
+    animation: icon 15s infinite;
+    animation-delay: 6s;
+}
+.icon:nth-child(7){
+    transform: translate(285px, 665px);
+    animation: icon 15s infinite;
+    animation-delay: 7s;
+}
+.icon:nth-child(8){
+    transform: translate(180px, 730px);
+    animation: icon 35s infinite;
+    animation-delay: 8s;
+}
+.icon:nth-child(9){
+    transform: translate(0, 770px);
+    animation: icon 35s infinite;
+    animation-delay: 9s;
+}
+.icon:nth-child(10){
+    transform: translate(-180px, 730px);
+    animation: icon 35s infinite;
+    animation-delay: 10s;
+}
+.icon:nth-child(11){
+    transform: translate(-285px, 665px);
+    animation: icon 35s infinite;
+    animation-delay: 11s;
+}
+.icon:nth-child(12){
+    transform: translate(-380px, 555px);
+
+    animation: icon 35s infinite;
+    animation-delay: 12s;
+}
+.icon:nth-child(13){
+    transform: translate(-420px, 385px);
+
+    animation: icon 35s infinite;
+    animation-delay: 13s;
+}
+.icon:nth-child(14){
+    transform: translate(-380px, 225px);
+    animation: icon 35s infinite;
+    animation-delay: 14s;
+}
+.icon:nth-child(15){
+    transform: translate(-290px, 120px);
+    animation: icon 35s infinite;
+    animation-delay: 15s;
+}
+.icon:nth-child(16){
+    transform: translate(-150px, 30px);
+    animation: icon 35s infinite;
+    animation-delay: 16s;
+}
+
+
+
+
+
+
+
+
+@keyframes icon {
+    50%{
+        transform: translate(0,0);
+    }
+    6.25%{
+        transform: translate(150px, 30px);
+    }
+    12.5% {
+        transform: translate(290px, 120px);
+    }
+    18.75%{
+        transform: translate(380px, 225px);
+    }
+    75%{
+        transform: translate(420px, 385px);
+    }
+    31.25%{
+        transform: translate(380px, 555px);
+    }
+    37.5%{
+        transform: translate(285px, 665px);
+    }
+    43.75%{
+        transform: translate(180px, 730px);
+    }
+    0%, 100%{
+        transform: translate(0, 770px);
+    }
+    56.25%{
+        transform: translate(-180px, 730px);
+    }
+    62.5%{
+        transform: translate(-285px, 665px);
+    }
+    68.75%{
+        transform: translate(-380px, 555px);
+    }
+    25%{
+        transform: translate(-420px, 385px);
+    }
+    81.25%{
+        transform: translate(-380px, 225px);
+    }
+    87.5%{
+        transform: translate(-290px, 120px);
+    }
+    93.75%{
+        transform: translate(-150px, 30px);
+    }
+}
