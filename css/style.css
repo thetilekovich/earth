@@ -1,3 +1,7 @@
+
+
+/* ---------------------------ROOT-------------------------------------------------- */
+
 *{
     padding: 0;
     margin: 0;
@@ -14,6 +18,14 @@ a, a:hover{
     padding: 15px;
     margin: auto;
 }
+
+
+
+/* ---------------------------------------HEADER START------------------------------------ */
+
+
+
+
 .header{
     display: flex;
     align-items: center ;
@@ -42,10 +54,19 @@ a, a:hover{
     color: wheat;
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
 }
 .login button:first-child{
     margin: 0 0 0 30px;
 }
+
+
+
+/* ---------------------------HEADER END-------------------------------------------------- */
+
+/* ---------------------------HERO START-------------------------------------------------- */
+
+
 
 .hero{
     display: flex;
@@ -64,14 +85,13 @@ a, a:hover{
     border-radius: 50%;
     width: 50%;
     height: 550px;
-    animation: earth 2s ease-out infinite;
-
+    animation: earth 3s infinite;
     box-shadow: 0 0 10px rgba(0, 123, 255, .7),
-                 0 0 70px rgba(0, 123, 255, .7),
-                  0 0 100px rgba(0, 123, 255, .7),
-                   0 0 140px rgba(0, 123, 255, .7),
-                    0 0 200px rgba(0, 123, 255, .7),
-                     0 0 250px rgba(0, 123, 255, .7);
+                    0 0 70px rgba(0, 123, 255, .7),
+                    0 0 100px rgba(0, 123, 255, .7),
+                    0 0 140px rgba(0, 123, 255, .7),
+                        0 0 200px rgba(0, 123, 255, .7),
+                        0 0 250px rgba(0, 123, 255, .7);
 }
 .hero-img{
     position: absolute;
@@ -80,14 +100,27 @@ a, a:hover{
     width: 139%;
     filter: brightness(1000%);
     filter: contrast(1000%);
+    
 }
+
 @keyframes earth {
-    0% 100%{
+    0%, 100%{
         transform: scale(1);
     }
     50%{
         transform: scale(.9);
+        box-shadow: 0 0 10px rgba(0, 123, 255, .7),
+                    0 0 70px rgba(0, 123, 255, .7),
+                    0 0 100px rgba(0, 123, 255, .7),
+                    0 0 140px rgba(0, 123, 255, .7),
+                    0 0 200px rgba(0, 123, 255, .7),
+                    0 0 250px rgba(0, 123, 255, .7),
+                    0 0 270px rgba(0, 123, 255, .7),
+                    0 0 340px rgba(0, 123, 255, .7),
+                    0 0 400px rgba(0, 123, 255, .7),
+                    0 0 450px rgba(0, 123, 255, .7);
     }
+    
 }
 
 .icons{
@@ -101,117 +134,48 @@ a, a:hover{
 }
 .icon-img{
     position: absolute;
+    background: transparent;
     top: 0;
     width: 40px;
     border: 1px solid ;
     border-color: rgb(17, 181, 246);
     padding: 10px;
     border-radius: 50%;
+    transition: .8s;
+    box-shadow: 0 0 10px rgba(0, 123, 255, .7),
+                0 0 70px rgba(0, 123, 255, .7),
+                0 0 100px rgba(0, 123, 255, .7),
+                0 0 120px rgba(0, 123, 255, .7);
+    }
+.icon-img:hover{
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7),
+                0 0 70px rgba(255, 0, 0, 0.7),
+                0 0 100px rgba(255, 0, 0, 0.7),
+                0 0 120px rgba(255, 0, 0, 0.7);
 }
-.icon:first-child{
+
+/* ---------------------------HERO ICONS ANIMATION-------------------------------------------------- */
+
+
+.icon:nth-child(1){
     transform: translate(0,0);
-    animation: icon 15s infinite;
-    animation-delay: 1s;
-}
-.icon:nth-child(2){
-    transform: translate(150px, 30px);
-    animation: icon 15s infinite;
-    animation-delay: 2s;
-}
-.icon:nth-child(3){
-    transform: translate(290px, 120px);
-    animation: icon 15s infinite;
-    animation-delay: 3s;
-}
-.icon:nth-child(4){
-    transform: translate(380px, 225px);
-    animation: icon 15s infinite;
-    animation-delay: 4s;
-}
-.icon:nth-child(5){
-    transform: translate(420px, 385px);
-    animation: icon 15s infinite;
-    animation-delay: 5s;
-}
-.icon:nth-child(6){
-    transform: translate(380px, 555px);
-    animation: icon 15s infinite;
-    animation-delay: 6s;
-}
-.icon:nth-child(7){
-    transform: translate(285px, 665px);
-    animation: icon 15s infinite;
-    animation-delay: 7s;
-}
-.icon:nth-child(8){
-    transform: translate(180px, 730px);
-    animation: icon 35s infinite;
-    animation-delay: 8s;
-}
-.icon:nth-child(9){
-    transform: translate(0, 770px);
-    animation: icon 35s infinite;
-    animation-delay: 9s;
-}
-.icon:nth-child(10){
-    transform: translate(-180px, 730px);
-    animation: icon 35s infinite;
-    animation-delay: 10s;
-}
-.icon:nth-child(11){
-    transform: translate(-285px, 665px);
-    animation: icon 35s infinite;
-    animation-delay: 11s;
-}
-.icon:nth-child(12){
-    transform: translate(-380px, 555px);
 
-    animation: icon 35s infinite;
-    animation-delay: 12s;
+    animation: icon1 20s ease infinite;
 }
-.icon:nth-child(13){
-    transform: translate(-420px, 385px);
-
-    animation: icon 35s infinite;
-    animation-delay: 13s;
-}
-.icon:nth-child(14){
-    transform: translate(-380px, 225px);
-    animation: icon 35s infinite;
-    animation-delay: 14s;
-}
-.icon:nth-child(15){
-    transform: translate(-290px, 120px);
-    animation: icon 35s infinite;
-    animation-delay: 15s;
-}
-.icon:nth-child(16){
-    transform: translate(-150px, 30px);
-    animation: icon 35s infinite;
-    animation-delay: 16s;
-}
-
-
-
-
-
-
-
-
-@keyframes icon {
-    50%{
+@keyframes icon1 {
+    0%, 100%{
         transform: translate(0,0);
     }
     6.25%{
         transform: translate(150px, 30px);
     }
-    12.5% {
+    12.5%{
         transform: translate(290px, 120px);
     }
     18.75%{
         transform: translate(380px, 225px);
     }
-    75%{
+    25%{
         transform: translate(420px, 385px);
     }
     31.25%{
@@ -223,19 +187,19 @@ a, a:hover{
     43.75%{
         transform: translate(180px, 730px);
     }
-    0%, 100%{
+    50%{
         transform: translate(0, 770px);
     }
     56.25%{
         transform: translate(-180px, 730px);
     }
-    62.5%{
+     62.5%{
         transform: translate(-285px, 665px);
     }
     68.75%{
         transform: translate(-380px, 555px);
     }
-    25%{
+    75%{
         transform: translate(-420px, 385px);
     }
     81.25%{
@@ -248,3 +212,1349 @@ a, a:hover{
         transform: translate(-150px, 30px);
     }
 }
+    
+.icon:nth-child(2){
+    transform: translate(150px, 30px);
+    animation: icon2 20s ease infinite;
+
+}
+
+@keyframes icon2 {
+    93.75%{
+        transform: translate(0,0);
+    }
+    0%, 100%{
+        transform: translate(150px, 30px);
+    }
+    6.25%{
+        transform: translate(290px, 120px);
+    }
+    12.5%{
+        transform: translate(380px, 225px);
+    }
+    18.75%{
+        transform: translate(420px, 385px);
+    }
+    25%{
+        transform: translate(380px, 555px);
+    }
+    31.25%{
+        transform: translate(285px, 665px);
+    }
+    37.5%{
+        transform: translate(180px, 730px);
+    }
+    43.75%{
+        transform: translate(0, 770px);
+    }
+    50%{
+        transform: translate(-180px, 730px);
+    }
+     56.25%{
+        transform: translate(-285px, 665px);
+    }
+    62.5%{
+        transform: translate(-380px, 555px);
+    }
+    68.75%{
+        transform: translate(-420px, 385px);
+    }
+    75%{
+        transform: translate(-380px, 225px);
+    }
+    81.25%{
+        transform: translate(-290px, 120px);
+    }
+   87.5%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(3){
+    transform: translate(290px, 120px);
+    animation: icon3 20s infinite;
+
+}
+
+@keyframes icon3 {
+    87.5%{
+        transform: translate(0,0);
+    }
+    93.75%{
+        transform: translate(150px, 30px);
+    }
+    0%, 100%{
+        transform: translate(290px, 120px);
+    }
+    6.25%{
+        transform: translate(380px, 225px);
+    }
+    12.5%{
+        transform: translate(420px, 385px);
+    }
+    18.75%{
+        transform: translate(380px, 555px);
+    }
+    25%{
+        transform: translate(285px, 665px);
+    }
+    31.25%{
+        transform: translate(180px, 730px);
+    }
+    37.5%{
+        transform: translate(0, 770px);
+    }
+    43.75%{
+        transform: translate(-180px, 730px);
+    }
+    50%{
+        transform: translate(-285px, 665px);
+    }
+    56.25%{
+        transform: translate(-380px, 555px);
+    }
+    62.5%{
+        transform: translate(-420px, 385px);
+    }
+    68.75%{
+        transform: translate(-380px, 225px);
+    }
+    75%{
+        transform: translate(-290px, 120px);
+    }
+    81.25%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(4){
+    transform: translate(380px, 225px);
+
+    animation: icon4 20s infinite;
+
+}
+
+@keyframes icon4 {
+    81.25%{
+        transform: translate(0,0);
+    }
+    87.5%{
+        transform: translate(150px, 30px);
+    }
+    93.75%{
+        transform: translate(290px, 120px);
+    }
+    0%, 100%{
+        transform: translate(380px, 225px);
+    }
+    6.25%{
+        transform: translate(420px, 385px);
+    }
+    12.5%{
+        transform: translate(380px, 555px);
+    }
+    18.75%{
+        transform: translate(285px, 665px);
+    }
+    25%{
+        transform: translate(180px, 730px);
+    }
+    31.25%{
+        transform: translate(0, 770px);
+    }
+    37.5%{
+        transform: translate(-180px, 730px);
+    }
+    43.75%{
+        transform: translate(-285px, 665px);
+    }
+    50%{
+        transform: translate(-380px, 555px);
+    }
+    56.25%{
+        transform: translate(-420px, 385px);
+    }
+    62.5%{
+        transform: translate(-380px, 225px);
+    }
+    68.75%{
+        transform: translate(-290px, 120px);
+    }
+    75%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(5){
+    transform: translate(420px, 385px);
+    animation: icon5 20s infinite;
+
+}
+@keyframes icon5 {
+    75%{
+        transform: translate(0,0);
+    }
+    81.25%{
+        transform: translate(150px, 30px);
+    }
+    87.5%{
+        transform: translate(290px, 120px);
+    }
+    93.75%{
+        transform: translate(380px, 225px);
+    }
+    0%, 100%{
+        transform: translate(420px, 385px);
+    }
+    6.25%{
+        transform: translate(380px, 555px);
+    }
+    12.5%{
+        transform: translate(285px, 665px);
+    }
+    18.75%{
+        transform: translate(180px, 730px);
+    }
+    25%{
+        transform: translate(0, 770px);
+    }
+    31.25%{
+        transform: translate(-180px, 730px);
+    }
+    37.5%{
+        transform: translate(-285px, 665px);
+    }
+    43.75%{
+        transform: translate(-380px, 555px);
+    }
+    50%{
+        transform: translate(-420px, 385px);
+    }
+    56.25%{
+        transform: translate(-380px, 225px);
+    }
+    62.5%{
+        transform: translate(-290px, 120px);
+    }
+    68.75%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(6){
+    transform: translate(380px, 555px);
+    animation: icon6 20s infinite;
+}
+@keyframes icon6 {
+    68.75%{
+        transform: translate(0,0);
+    }
+    75%{
+        transform: translate(150px, 30px);
+    }
+    81.25%{
+        transform: translate(290px, 120px);
+    }
+    87.5%{
+        transform: translate(380px, 225px);
+    }
+    93.75%{
+        transform: translate(420px, 385px);
+    }
+    0%, 100%{
+        transform: translate(380px, 555px);
+    }
+    6.25%{
+        transform: translate(285px, 665px);
+    }
+    12.5%{
+        transform: translate(180px, 730px);
+    }
+    18.75%{
+        transform: translate(0, 770px);
+    }
+    25%{
+        transform: translate(-180px, 730px);
+    }
+    31.25%{
+        transform: translate(-285px, 665px);
+    }
+    37.5%{
+        transform: translate(-380px, 555px);
+    }
+    43.75%{
+        transform: translate(-420px, 385px);
+    }
+    50%{
+        transform: translate(-380px, 225px);
+    }
+    56.25%{
+        transform: translate(-290px, 120px);
+    }
+    62.5%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(7){
+    transform: translate(285px, 665px);
+    animation: icon7 20s infinite;
+
+}
+@keyframes icon7 {
+    62.5%{
+        transform: translate(0,0);
+    }
+    68.75%{
+        transform: translate(150px, 30px);
+    }
+    75%{
+        transform: translate(290px, 120px);
+    }
+    81.25%{
+        transform: translate(380px, 225px);
+    }
+    87.5%{
+        transform: translate(420px, 385px);
+    }
+    93.75%{
+        transform: translate(380px, 555px);
+    }
+    0%, 100%{
+        transform: translate(285px, 665px);
+    }
+    6.25%{
+        transform: translate(180px, 730px);
+    }
+    12.5%{
+        transform: translate(0, 770px);
+    }
+    18.75%{
+        transform: translate(-180px, 730px);
+    }
+    25%{
+        transform: translate(-285px, 665px);
+    }
+    31.25%{
+        transform: translate(-380px, 555px);
+    }
+    37.5%{
+        transform: translate(-420px, 385px);
+    }
+    43.75%{
+        transform: translate(-380px, 225px);
+    }
+    50%{
+        transform: translate(-290px, 120px);
+    }
+    56.25%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(8){
+    transform: translate(180px, 730px);
+    animation: icon8 20s infinite;
+}
+@keyframes icon8 {
+    56.25%{
+        transform: translate(0,0);
+    }
+    62.5%{
+        transform: translate(150px, 30px);
+    }
+    68.75%{
+        transform: translate(290px, 120px);
+    }
+    75%{
+        transform: translate(380px, 225px);
+    }
+    81.25%{
+        transform: translate(420px, 385px);
+    }
+    87.5%{
+        transform: translate(380px, 555px);
+    }
+    93.75%{
+        transform: translate(285px, 665px);
+    }
+    0%, 100%{
+        transform: translate(180px, 730px);
+    }
+    6.25%{
+        transform: translate(0, 770px);
+    }
+    12.5%{
+        transform: translate(-180px, 730px);
+    }
+    18.75%{
+        transform: translate(-285px, 665px);
+    }
+    25%{
+        transform: translate(-380px, 555px);
+    }
+    31.25%{
+        transform: translate(-420px, 385px);
+    }
+    37.5%{
+        transform: translate(-380px, 225px);
+    }
+    43.75%{
+        transform: translate(-290px, 120px);
+    }
+    50%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(9){
+    transform: translate(0, 770px);
+    animation: icon9 20s infinite;
+}
+
+@keyframes icon9 {
+    50%{
+        transform: translate(0,0);
+    }
+    56.25%{
+        transform: translate(150px, 30px);
+    }
+    62.5%{
+        transform: translate(290px, 120px);
+    }
+    68.75%{
+        transform: translate(380px, 225px);
+    }
+    75%{
+        transform: translate(420px, 385px);
+    }
+    81.25%{
+        transform: translate(380px, 555px);
+    }
+    87.5%{
+        transform: translate(285px, 665px);
+    }
+    93.75%{
+        transform: translate(180px, 730px);
+    }
+    0%, 100%{
+        transform: translate(0, 770px);
+    }
+    6.25%{
+        transform: translate(-180px, 730px);
+    }
+    12.5%{
+        transform: translate(-285px, 665px);
+    }
+    18.75%{
+        transform: translate(-380px, 555px);
+    }
+    25%{
+        transform: translate(-420px, 385px);
+    }
+    31.25%{
+        transform: translate(-380px, 225px);
+    }
+    37.5%{
+        transform: translate(-290px, 120px);
+    }
+    43.75%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(10){
+    transform: translate(-180px, 730px);
+    animation: icon10 20s infinite;
+}
+@keyframes icon10 {
+    43.75%{
+        transform: translate(0,0);
+    }
+    50%{
+        transform: translate(150px, 30px);
+    }
+    56.25%{
+        transform: translate(290px, 120px);
+    }
+    62.5%{
+        transform: translate(380px, 225px);
+    }
+    68.75%{
+        transform: translate(420px, 385px);
+    }
+    75%{
+        transform: translate(380px, 555px);
+    }
+    81.25%{
+        transform: translate(285px, 665px);
+    }
+    87.5%{
+        transform: translate(180px, 730px);
+    }
+    93.75%{
+        transform: translate(0, 770px);
+    }
+    0%, 100%{
+        transform: translate(-180px, 730px);
+    }
+    6.25%{
+        transform: translate(-285px, 665px);
+    }
+    12.5%{
+        transform: translate(-380px, 555px);
+    }
+    18.75%{
+        transform: translate(-420px, 385px);
+    }
+    25%{
+        transform: translate(-380px, 225px);
+    }
+    31.25%{
+        transform: translate(-290px, 120px);
+    }
+    37.5%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(11){
+    transform: translate(-285px, 665px);
+    animation: icon11 20s infinite;
+}
+@keyframes icon11 {
+    37.5%{
+        transform: translate(0,0);
+    }
+    43.75%{
+        transform: translate(150px, 30px);
+    }
+    50%{
+        transform: translate(290px, 120px);
+    }
+    56.25%{
+        transform: translate(380px, 225px);
+    }
+    62.5%{
+        transform: translate(420px, 385px);
+    }
+    68.75%{
+        transform: translate(380px, 555px);
+    }
+    75%{
+        transform: translate(285px, 665px);
+    }
+    81.25%{
+        transform: translate(180px, 730px);
+    }
+    87.5%{
+        transform: translate(0, 770px);
+    }
+    93.75%{
+        transform: translate(-180px, 730px);
+    }
+    0%, 100%{
+        transform: translate(-285px, 665px);
+    }
+    6.25%{
+        transform: translate(-380px, 555px);
+    }
+    12.5%{
+        transform: translate(-420px, 385px);
+    }
+    18.75%{
+        transform: translate(-380px, 225px);
+    }
+    25%{
+        transform: translate(-290px, 120px);
+    }
+    31.25%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(12){
+    transform: translate(-380px, 555px);
+    animation: icon12 20s infinite;
+}
+
+@keyframes icon12 {
+    31.25%{
+        transform: translate(0,0);
+    }
+    37.5%{
+        transform: translate(150px, 30px);
+    }
+    43.75%{
+        transform: translate(290px, 120px);
+    }
+    50%{
+        transform: translate(380px, 225px);
+    }
+    56.25%{
+        transform: translate(420px, 385px);
+    }
+    62.5%{
+        transform: translate(380px, 555px);
+    }
+    68.75%{
+        transform: translate(285px, 665px);
+    }
+    75%{
+        transform: translate(180px, 730px);
+    }
+    81.25%{
+        transform: translate(0, 770px);
+    }
+    87.5%{
+        transform: translate(-180px, 730px);
+    }
+    93.75%{
+        transform: translate(-285px, 665px);
+    }
+    0%, 100%{
+        transform: translate(-380px, 555px);
+    }
+    6.25%{
+        transform: translate(-420px, 385px);
+    }
+    12.5%{
+        transform: translate(-380px, 225px);
+    }
+    18.75%{
+        transform: translate(-290px, 120px);
+    }
+    25%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(13){
+    transform: translate(-420px, 385px);
+    animation: icon13 20s infinite;
+}
+@keyframes icon13 {
+    25%{
+        transform: translate(0,0);
+    }
+    31.25%{
+        transform: translate(150px, 30px);
+    }
+    37.5%{
+        transform: translate(290px, 120px);
+    }
+    43.75%{
+        transform: translate(380px, 225px);
+    }
+    50%{
+        transform: translate(420px, 385px);
+    }
+    56.25%{
+        transform: translate(380px, 555px);
+    }
+    62.5%{
+        transform: translate(285px, 665px);
+    }
+    68.75%{
+        transform: translate(180px, 730px);
+    }
+    75%{
+        transform: translate(0, 770px);
+    }
+    81.25%{
+        transform: translate(-180px, 730px);
+    }
+    87.5%{
+        transform: translate(-285px, 665px);
+    }
+    93.75%{
+        transform: translate(-380px, 555px);
+    }
+    0%, 100%{
+        transform: translate(-420px, 385px);
+    }
+    6.25%{
+        transform: translate(-380px, 225px);
+    }
+    12.5%{
+        transform: translate(-290px, 120px);
+    }
+    18.75%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(14){
+    transform: translate(-380px, 225px);
+    animation: icon14 20s infinite;
+}
+@keyframes icon14 {
+    18.75%{
+        transform: translate(0,0);
+    }
+    25%{
+        transform: translate(150px, 30px);
+    }
+    31.25%{
+        transform: translate(290px, 120px);
+    }
+    37.5%{
+        transform: translate(380px, 225px);
+    }
+    43.75%{
+        transform: translate(420px, 385px);
+    }
+    50%{
+        transform: translate(380px, 555px);
+    }
+    56.25%{
+        transform: translate(285px, 665px);
+    }
+    62.5%{
+        transform: translate(180px, 730px);
+    }
+    68.75%{
+        transform: translate(0, 770px);
+    }
+    75%{
+        transform: translate(-180px, 730px);
+    }
+    81.25%{
+        transform: translate(-285px, 665px);
+    }
+    87.5%{
+        transform: translate(-380px, 555px);
+    }
+    93.75%{
+        transform: translate(-420px, 385px);
+    }
+    0%, 100%{
+        transform: translate(-380px, 225px);
+    }
+    6.25%{
+        transform: translate(-290px, 120px);
+    }
+    12.5%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(15){
+    transform: translate(-290px, 120px);
+    animation: icon15 20s infinite;
+}
+@keyframes icon15 {
+    12.5%{
+        transform: translate(0,0);
+    }
+    18.75%{
+        transform: translate(150px, 30px);
+    }
+    25%{
+        transform: translate(290px, 120px);
+    }
+    31.25%{
+        transform: translate(380px, 225px);
+    }
+    37.5%{
+        transform: translate(420px, 385px);
+    }
+    43.75%{
+        transform: translate(380px, 555px);
+    }
+    50%{
+        transform: translate(285px, 665px);
+    }
+    56.25%{
+        transform: translate(180px, 730px);
+    }
+    62.5%{
+        transform: translate(0, 770px);
+    }
+    68.75%{
+        transform: translate(-180px, 730px);
+    }
+    75%{
+        transform: translate(-285px, 665px);
+    }
+    81.25%{
+        transform: translate(-380px, 555px);
+    }
+    87.5%{
+        transform: translate(-420px, 385px);
+    }
+    93.75%{
+        transform: translate(-380px, 225px);
+    }
+    0%, 100%{
+        transform: translate(-290px, 120px);
+    }
+    6.25%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+.icon:nth-child(16){
+    transform: translate(-290px, 120px);
+    animation: icon16 20s infinite;
+}
+@keyframes icon16 {
+    6.25%{
+        transform: translate(0,0);
+    }
+    12.5%{
+        transform: translate(150px, 30px);
+    }
+    18.75%{
+        transform: translate(290px, 120px);
+    }
+    25%{
+        transform: translate(380px, 225px);
+    }
+    31.25%{
+        transform: translate(420px, 385px);
+    }
+    37.5%{
+        transform: translate(380px, 555px);
+    }
+    43.75%{
+        transform: translate(285px, 665px);
+    }
+    50%{
+        transform: translate(180px, 730px);
+    }
+    56.25%{
+        transform: translate(0, 770px);
+    }
+    62.5%{
+        transform: translate(-180px, 730px);
+    }
+    68.75%{
+        transform: translate(-285px, 665px);
+    }
+    75%{
+        transform: translate(-380px, 555px);
+    }
+    81.25%{
+        transform: translate(-420px, 385px);
+    }
+    87.5%{
+        transform: translate(-380px, 225px);
+    }
+    93.75%{
+        transform: translate(-290px, 120px);
+    }
+    0%, 100%{
+        transform: translate(-150px, 30px);
+    }
+}
+
+/* ---------------------------HERO STARS START-------------------------------------------------- */
+.star{
+    animation: star 3s infinite;
+    position: absolute;
+    width: 10px;
+}
+.starts{
+
+}
+.stars2{
+    position: absolute;
+    transform: scale(1, -1);
+    top: 900px;
+    left: 0;
+}
+.stars3{
+    position: absolute;
+    transform: rotate(180deg);
+    transform: scale(-1, -1);
+    top: 900px;
+    right: 0;
+}
+.stars4{
+    position: absolute;
+    transform: scale(-1, 1);
+    top: 0;
+    right: 0;
+}
+/* ---------------------------------------LEFT STARS------------------------------------ */
+.star1{
+    left: 100px;
+    width: 10px;
+    animation-delay: 1;
+}
+.star2{
+    left: 40px;
+    top: 300px;
+    width: 5px;
+    animation-delay: 1;
+
+
+}
+.star3{
+    left: 70px;
+    top: 200px;
+    width: 3px;
+    animation-delay: 3;
+
+}
+.star4{
+    left: 10px;
+    top: 10px;
+    width: 5px;
+    animation-delay: 5;
+
+}
+.star5{
+    left: 70px;
+    top: 100px;
+    width: 7px;
+    animation-delay: 5;
+
+}
+.star6{
+    left: 200px;
+    top: 80px;
+    width: 15px;
+    animation-delay: 2;
+
+}
+.star7{
+    left: 40px;
+    top: 300px;
+    width: 5px;
+    animation-delay: 3;
+
+}
+.star8{
+    left: 0;
+    top: 150px;
+    width: 3px;
+    animation-delay: 1;
+
+
+}
+.star9{
+    left: 170px;
+    top: 160px;
+    width: 7px;
+    animation-delay: 2;
+
+}
+.star10{
+    left: 280px;
+    top: 10px;
+    width: 5px;
+    animation-delay: 1;
+
+}
+.star11{
+    left: 0px;
+    top: 230px;
+    width: 5px;
+    animation-delay: 3;
+
+}
+.star12{
+    left: 180px;
+    top: 30px;
+    width: 1px;
+    animation-delay: 5;
+
+}
+.star13{
+    left: 5px;
+    top: 80px;
+    width: 2px;
+    animation-delay: 2;
+
+}
+.star14{
+    left: 120px;
+    top: 80px;
+    width: 3px;
+    animation-delay: 5;
+
+}
+.star15{
+    left: 350px;
+    top: 0px;
+    width: 5px;
+    animation-delay: 3;
+
+}
+.star16{
+    left: 300px;
+    top: 50px;
+    width: 7px;
+    animation-delay: 5;
+
+}
+.star17{
+    left: 400px;
+    top: 20px;
+    width: 15px;
+    animation-delay: 2;
+
+}
+.star18{
+    left: 255px;
+    top: 100px;
+    width: 10px;
+    animation-delay: 1;
+
+}
+.star19{
+    left: 230px;
+    top: 10px;
+    width: 3px;
+    animation-delay: 3;
+
+}
+.star20{
+    left: 360px;
+    top: 50px;
+    width: 5px;
+    animation-delay: 5;
+
+}
+.star21{
+    left: 440px;
+    top: 0px;
+    width: 12px;
+    animation-delay: 2;
+
+}
+.star22{
+    left: 450px;
+    top: 30px;
+    width: 1px;
+    animation-delay: 5;
+
+}
+.star23{
+    left: 400px;
+    top: 20px;
+    width: 2px;
+    animation-delay: 1;
+
+}
+.star24{
+    left: 500px;
+    top: 0px;
+    width: 4px;
+    animation-delay: 3;
+
+}
+.star25{
+    left: 560px;
+    top: 0px;
+    width: 5px;
+    animation-delay: 5;
+
+}
+.star26{
+    left: 580px;
+    top: 20px;
+    width: 10px;
+    animation-delay: 2;
+
+}
+.star27{
+    left: 620px;
+    top: 0px;
+    width: 3px;
+    animation-delay: 3;
+
+}
+.star28{
+    left: 640px;
+    top: 30px;
+    width: 7px;
+    animation-delay: 1;
+
+}
+.star29{
+    left: 680px;
+    top: 0px;
+    width: 3px;
+    animation-delay: 5;
+
+}
+.star30{
+    left: 730px;
+    top: 20px;
+    width: 1px;
+    animation-delay: 2;
+
+}
+.star31{
+    left: 770px;
+    top: 0px;
+    width: 5px;
+    animation-delay: 1;
+
+}
+.star32{
+    left: 750px;
+    top: 70px;
+    width: 15px;
+    animation-delay: 3;
+
+}
+.star33{
+    left: 790px;
+    top: 50px;
+    width: 3px;
+    animation-delay: 5;
+
+}
+.star34{
+    left: 830px;
+    top: 100px;
+    width: 10px;
+    animation-delay: 2;
+
+}
+.star35{
+    left: 0px;
+    top: 330px;
+    width: 5px;
+    animation-delay: 1;
+
+}
+.star36{
+    left: 100px;
+    top: 250px;
+    width: 3px;
+    animation-delay: 3;
+
+}
+.star37{
+    left: 85px;
+    top: 150px;
+    width: 7px;
+    animation-delay: 5;
+
+}
+.star38{
+    left: 250px;
+    top: 100px;
+    width: 3px;
+    animation-delay: 2;
+
+}
+.star39{
+    left: 60px;
+    top: 340px;
+    width: 5px;
+    animation-delay: 1;
+
+}
+.star40{
+    left: 20px;
+    top: 380px;
+    width: 15px;
+    animation-delay: 5;
+
+}
+.star41{
+    left: 80px;
+    top: 380px;
+    width: 10px;
+    animation-delay: 5;
+
+}
+.star42{
+    left: 0px;
+    top: 420px;
+    width: 3px;
+    animation-delay: 2;
+
+}
+.star43{
+    left: 50px;
+    top: 420px;
+    width: 1px;
+    animation-delay: 5;
+
+}
+.star44{
+    left: 80px;
+    top: 470px;
+    width: 7px;
+    animation-delay: 1;
+
+}
+.star45{
+    left: 10px;
+    top: 470px;
+    width: 3px;
+    animation-delay: 5;
+
+}
+.star46{
+    left: 40px;
+    top: 500px;
+    width: 5px;
+    animation-delay: 3;
+
+
+}
+.star47{
+    left: 80px;
+    top: 550px;
+    width: 3px;
+    animation-delay: 2;
+
+}
+.star48{
+    left: 10px;
+    top: 545px;
+    width: 10px;
+    animation-delay: 5;
+
+}
+.star49{
+    left: 80px;
+    top: 635px;
+    width: 5px;
+    animation-delay: 1;
+
+}
+.star50{
+    left: 0px;
+    top: 610px;
+    width: 3px;
+    animation-delay: 5;
+
+}
+.star51{
+    left: 750px;
+    top: 70px;
+    width: 7px;
+    animation-delay: 3;
+
+}
+.star52{
+    left: 790px;
+    top: 50px;
+    width: 5px;
+    animation-delay: 2;
+
+}
+.star53{
+    left: 830px;
+    top: 100px;
+    width: 10px;
+    animation-delay: 1;
+
+}
+
+
+
+
+
+@keyframes star {
+    0%, 100%{
+        transform: scale(1.3);
+    }
+    50%{
+        transform: scale(.7);
+    }
+}
+/* ---------------------------------- FALLING STARS---------------------------------- */
+.fallingstars{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.fallingstar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 40px;
+    width: 1px;
+    transition: 3s;
+    -webkit-box-shadow: 0px 20px 15px 10px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 0px 20px 15px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 20px 2px 5px rgba(255, 255, 255, 0.2),
+                0px 20px 10px 5px rgba(255, 255, 255, 0.2),
+                0px 20px 20px 5px rgba(255, 255, 255, 0.2),
+                0px 20px 30px 5px rgba(255, 255, 255, 0.2),
+                0px 20px 45px 5px rgba(255, 255, 255, 0.2);
+}
+.fallingstar:first-child{
+    animation: fallstar 1s alternate;
+    animation-delay: 5s;
+    box-shadow:  20px 2px 5px rgba(255, 3, 3, 1),
+                0px 20px 10px 5px rgb(255, 1, .8),
+                0px 20px 20px 5px rgba(255, 0, 0, 0.6),
+                0px 20px 30px 5px rgba(255, 0, 0, 0.4),
+                0px 20px 45px 5px rgba(255, 0, 0, 0.2);
+}
+
+.fallingstar:nth-child(2){
+    animation: fallstar 1s infinite;
+    animation-delay: 2s;
+}
+.fallingstar:nth-child(3){
+    animation: fallstar2 3s infinite;
+    animation-delay: 7s;
+}
+.fallingstar:nth-child(4){
+    animation: fallstar3 3s infinite;
+    animation-delay: 2s;
+}
+
+@keyframes fallstar3 {
+    0%, 90%{
+        top: -200px;
+        left: 700px;
+    }
+    100%{
+        top: 900px;
+        left: 1500px;
+    }
+}
+@keyframes fallstar2 {
+    0%, 90%{
+        top: -200px;
+        left: 300px;
+    }
+    100%{
+        top: 900px;
+        left: -50px;
+    }
+}
+
+
+
+
+@keyframes fallstar {
+    0%{
+        top: -200px;
+        left: 200px;
+    }
+    100%{
+        top: 500px;
+        left: -100px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------HERO END-------------------------------------------------- */
+/* ----------------------------------------------------------------------------- */
+
